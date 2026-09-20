@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Waste AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>♻️ Smart Waste AI</h1>
+                <p>AI-Based Smart Waste Segregation Assistant</p>
+            </div>
+
+            <div class="sdg-badge">
+                SDG 12
+                <span>Responsible Consumption & Production</span>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Introduction -->
+
+        <section class="hero">
+
+            <h2>Dispose Smart. Live Sustainably. 🌱</h2>
+
+            <p>
+                Enter the name or description of a waste item.
+                The assistant will help identify its waste category
+                and provide appropriate disposal guidance.
+            </p>
+
+        </section>
+
+
+        <!-- Waste Checker -->
+
+        <section class="checker">
+
+            <h2>🔍 Check Your Waste</h2>
+
+            <form method="POST">
+
+                <input
+                    type="text"
+                    name="waste_item"
+                    placeholder="Example: plastic bottle"
+                    required
+                >
+
+                <button type="submit">
+                    Analyze Waste
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Result -->
+
+        {% if result %}
+
+        <section class="result">
+
+            <h2>🤖 Waste Analysis Result</h2>
+
+            <div class="result-item">
+                <strong>Waste Item</strong>
+                <p>{{ result.item }}</p>
+            </div>
+
+            <div class="result-item">
+                <strong>Category</strong>
+                <p>{{ result.category }}</p>
+            </div>
+
+            <div class="result-item">
+                <strong>Recommended Disposal</strong>
+                <p>{{ result.disposal }}</p>
+            </div>
+
+            <div class="tip">
+                <strong>🌱 Sustainability Tip</strong>
+                <p>{{ result.tip }}</p>
+            </div>
+
+        </section>
+
+        {% endif %}
+
+
+        <!-- Waste Categories -->
+
+        <section class="categories">
+
+            <h2>♻️ Common Waste Categories</h2>
+
+            <div class="category-container">
+
+                <div class="category-card">
+                    <h3>🍌 Wet Waste</h3>
+                    <p>
+                        Food waste, fruit peels and other organic materials.
+                    </p>
+                </div>
+
+                <div class="category-card">
+                    <h3>📦 Dry Waste</h3>
+                    <p>
+                        Paper, cardboard, plastic and recyclable materials.
+                    </p>
+                </div>
+
+                <div class="category-card">
+                    <h3>🔋 Hazardous Waste</h3>
+                    <p>
+                        Batteries, chemicals and other potentially harmful waste.
+                    </p>
+                </div>
+
+                <div class="category-card">
+                    <h3>💻 E-Waste</h3>
+                    <p>
+                        Electronic devices and electronic components.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About Project -->
+
+        <section class="about">
+
+            <h2>🌍 About This Project</h2>
+
+            <p>
+                Smart Waste AI is designed to support responsible waste
+                segregation by using AI-based assistance to provide
+                useful disposal information.
+            </p>
+
+            <p>
+                The project focuses primarily on
+                <strong>SDG 12 – Responsible Consumption and Production.</strong>
+            </p>
+
+        </section>
+
+
+        <!-- Responsible AI -->
+
+        <section class="responsible">
+
+            <h2>🛡️ Responsible AI</h2>
+
+            <p>
+                The system should provide clear and responsible guidance.
+                Users should verify disposal requirements with their
+                local waste-management rules when necessary.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Smart Waste AI | AI for Sustainability
+        </p>
+
+        <p>
+            SDG 12 – Responsible Consumption and Production
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
