@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f8f5;
+    color: #26332a;
+}
+
+
+/* Header */
+
+header {
+    background: #1f6f43;
+    color: white;
+    padding: 25px 8%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.sdg-badge {
+    background: white;
+    color: #1f6f43;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sdg-badge span {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: normal;
+}
+
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+/* Waste Checker */
+
+.checker {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.checker h2 {
+    margin-top: 0;
+}
+
+input {
+    width: 65%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 15px 22px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #1f6f43;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #15552f;
+}
+
+
+/* Result */
+
+.result {
+    margin-top: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.result h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.result-item {
+    background: #f4f8f5;
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 8px;
+}
+
+.result-item p,
+.tip p {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.tip {
+    margin-top: 15px;
+    padding: 18px;
+    border-radius: 8px;
+    background: #e6f4ea;
+}
+
+
+/* Categories */
+
+.categories {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.category-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.category-card h3 {
+    margin-top: 0;
+}
+
+.category-card p {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
+/* About */
+
+.about,
+.responsible {
+    background: white;
+    margin-top: 35px;
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 1.6;
+}
+
+.about h2,
+.responsible h2 {
+    margin-top: 0;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 50px;
+    padding: 25px;
+    background: #1f6f43;
+    color: white;
+    text-align: center;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin: 12px 0 0;
+    }
+
+    .category-container {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+}
